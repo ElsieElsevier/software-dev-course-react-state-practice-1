@@ -1,21 +1,20 @@
-import movie from "../mock-data/movies.js"
+import {movies} from "../mock-data/movies.js"
 
-function MovieList({movies}) {
+function MovieList({currentGenre}) {
+
+    const filterMovies = movies.filter(movie =>
+        movie.genre === currentGenre)
+
     return(
         <div>
-            <h1>Genres</h1>
-            
-            {movies === 0 ?(
-                <p>No movies exists for this genre</p>
-            ):(
+            <h1>Movies</h1>
                 <ul>
-                    {movies.map(movie => (
+                    {filterMovies.map(movie => (
                         <li key={movie.id}>
                             {movie.title}
                         </li>
                     ))}
                 </ul>
-            )}
         </div>
     )
 }

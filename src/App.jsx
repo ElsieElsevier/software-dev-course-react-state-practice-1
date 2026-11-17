@@ -7,10 +7,12 @@ function App() {
 
 	const [currentGenre, setCurrentGenre] = useState("");
 
-	return <>
+	return ( <>
+		<div>
 		<GenreList setCurrentGenre={setCurrentGenre}/>
 		<MovieList currentGenre={currentGenre}/>
-	</>
+		</div>
+	</>)
 }
 
 export default App;

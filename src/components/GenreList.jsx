@@ -1,4 +1,4 @@
-import genres from "../mock-data/genres.js"
+import {genres} from "../mock-data/genres.js"
 
 function GenreList({setCurrentGenre}) {
     return(
