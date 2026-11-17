@@ -8,6 +8,10 @@ function MovieList({currentGenre}) {
     return(
         <div>
             <h1>Movies</h1>
+
+            {filterMovies.length === 0 ? (
+                <p>No movies found for this genre!</p>
+            ) : (
                 <ul>
                     {filterMovies.map(movie => (
                         <li key={movie.id}>
@@ -15,6 +19,7 @@ function MovieList({currentGenre}) {
                         </li>
                     ))}
                 </ul>
+            )}
         </div>
     )
 }
